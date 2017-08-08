@@ -86,7 +86,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-   htmlTemplate(articleOne);
+   res.send(htmlTemplate(articleOne));
 });
 
 app.get('/article-two',function(req,res){
