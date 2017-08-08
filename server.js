@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne={
+var articles={
+    articleOne : {
     title:'ARTICLE ONE | SIDHU',
     header:' Article One',
     date:'Aug 8,2017',
@@ -25,7 +25,42 @@ var articleOne={
                 
                 </p>`
     
-                };
+                },
+    articleTwo :{title:'ARTICLE TWO | SIDHU',
+    header:' Article Two',
+    date:'Aug 9,2017',
+    content:`   <p>
+                    This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
+                
+                </p>
+            
+                <p>
+                    This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
+                
+                </p>
+            
+                <p>
+                    This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
+                
+                </p>`},
+    articleThree:{title:'ARTICLE THREE | SIDHU',
+    header:' Article Three',
+    date:'Aug 10,2017',
+    content:`   <p>
+                    This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
+                
+                </p>
+            
+                <p>
+                    This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
+                
+                </p>
+            
+                <p>
+                    This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
+                
+                </p>`}
+};
 
 function htmlTemplate(data)
 {
@@ -90,11 +125,11 @@ app.get('/article-one',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
-   res.sendFile(path.join(__dirname,'ui','article-one.html')); 
+   res.send(htmlTemplate(articleTwo)); 
 });
 
 app.get('/article-three',function(req,res){
-   res.sendFile(path.join(__dirname,'ui','article-three.html')); 
+   res.send(htmlTemplate(articleThree)); 
 });
 
 app.get('/ui/style.css', function (req, res) {
