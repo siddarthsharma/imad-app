@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
 var articleOne={
     title:'ARTICLE ONE | SIDHU',
-    header:' Article One'
+    header:' Article One',
     date:'Aug 8,2017',
     content:`   <p>
                     This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....This is the content of the the article one page....
@@ -25,7 +25,7 @@ var articleOne={
                 
                 </p>`
     
-};
+                };
 
 function htmlTemplate(data)
 {
