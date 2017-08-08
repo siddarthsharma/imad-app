@@ -38,7 +38,7 @@ function htmlTemplate(data)
     `   <html>
         <head>
     
-            <title>$(title)</title>
+            <title>${title}</title>
         
             <meta name="viewport" content="width=device-width,initial-scale=1">
     
@@ -57,16 +57,16 @@ function htmlTemplate(data)
                 <hr/>
         
                 <h3>
-                    $(header)
+                    ${header}
                 </h3>
         
                 <div>
-                    $(date)
+                    ${date}
                 </div>
         
                 <div>
         
-                    $(content)
+                    ${content}
             
                 </div>
         
