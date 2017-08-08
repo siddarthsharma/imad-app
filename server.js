@@ -34,7 +34,7 @@ function htmlTemplate(data)
     var content=data.content;
     var header = data.header;
     
-    var htmlPage={
+    var htmlPage=
     `   <html>
         <head>
     
@@ -74,10 +74,11 @@ function htmlTemplate(data)
     
         </body>
   
-    </html>
-`
-    return htmlPage ;   
-    }
+    </html>`;
+
+       
+    
+    return htmlPage ;
 }
 
 app.get('/', function (req, res) {
