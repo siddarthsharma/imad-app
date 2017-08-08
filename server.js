@@ -121,15 +121,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-   res.send(htmlTemplate(articleOne));
+   res.send(htmlTemplate(articles.articleOne));
 });
 
 app.get('/article-two',function(req,res){
-   res.send(htmlTemplate(articleTwo)); 
+   res.send(htmlTemplate(articles.articleTwo)); 
 });
 
 app.get('/article-three',function(req,res){
-   res.send(htmlTemplate(articleThree)); 
+   res.send(htmlTemplate(articles.articleThree)); 
 });
 
 app.get('/ui/style.css', function (req, res) {
